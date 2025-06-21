@@ -76,7 +76,7 @@
         <meta-data
             android:name="com.android.graphics.intervention.wm.allowDownscale"
             android:value="false"/>
-        
+
         <!-- Game Mode configuration -->
         <meta-data
             android:name="android.game_mode_config"

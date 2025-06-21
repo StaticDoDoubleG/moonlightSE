@@ -1,12 +1,12 @@
-package com.limelight.binding.input.evdev;
+package com.servicelight.binding.input.evdev;
 
 import android.app.Activity;
 import android.os.Build;
 import android.os.Looper;
 import android.widget.Toast;
 
-import com.limelight.LimeLog;
-import com.limelight.binding.input.capture.InputCaptureProvider;
+import com.servicelight.LimeLog;
+import com.servicelight.binding.input.capture.InputCaptureProvider;
 
 import java.io.DataOutputStream;
 import java.io.File;

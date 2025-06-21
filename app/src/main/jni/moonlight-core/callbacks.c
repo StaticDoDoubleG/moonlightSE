@@ -3,7 +3,7 @@
 #include <pthread.h>
 #include <string.h>
 
-#include <Limelight.h>
+#include <servicelight.h>
 
 #include <opus_multistream.h>
 #include <android/log.h>
@@ -78,9 +78,9 @@ JNIEnv* GetThreadEnv(void) {
 }
 
 JNIEXPORT void JNICALL
-Java_com_limelight_nvstream_jni_MoonBridge_init(JNIEnv *env, jclass clazz) {
+Java_com_servicelight_nvstream_jni_MoonBridge_init(JNIEnv *env, jclass clazz) {
     (*env)->GetJavaVM(env, &JVM);
-    GlobalBridgeClass = (*env)->NewGlobalRef(env, (*env)->FindClass(env, "com/limelight/nvstream/jni/MoonBridge"));
+    GlobalBridgeClass = (*env)->NewGlobalRef(env, (*env)->FindClass(env, "com/servicelight/nvstream/jni/MoonBridge"));
     BridgeDrSetupMethod = (*env)->GetStaticMethodID(env, clazz, "bridgeDrSetup", "(IIII)I");
     BridgeDrStartMethod = (*env)->GetStaticMethodID(env, clazz, "bridgeDrStart", "()V");
     BridgeDrStopMethod = (*env)->GetStaticMethodID(env, clazz, "bridgeDrStop", "()V");
@@ -452,7 +452,7 @@ hasFastAes() {
 }
 
 JNIEXPORT jint JNICALL
-Java_com_limelight_nvstream_jni_MoonBridge_startConnection(JNIEnv *env, jclass clazz,
+Java_com_servicelight_nvstream_jni_MoonBridge_startConnection(JNIEnv *env, jclass clazz,
                                                            jstring address, jstring appVersion, jstring gfeVersion,
                                                            jstring rtspSessionUrl, jint serverCodecModeSupport,
                                                            jint width, jint height, jint fps,
